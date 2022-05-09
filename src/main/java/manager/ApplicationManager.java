@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 //https://www.reddit.com/r/learnpython/comments/4zzn69/how_do_i_get_adblockplus_to_work_with_selenium/
 //'C:\Users\YOUR_USER_NAME\AppData\Local\Google\Chrome\User Data\Default\Extensions'
 public class ApplicationManager {
@@ -17,7 +19,7 @@ public class ApplicationManager {
 
 
     public void init() {
-        //wd = new ChromeDriver();
+       // wd = new ChromeDriver();
 
         ChromeOptions options = new ChromeOptions();
 //        options.addArguments("load-extension=/Users/tayahatum/Library/Application\\ Support/Google/Chrome/Default/Extensions/gighmmpiobklfepjocnamgkkbiglidom");
@@ -26,7 +28,7 @@ public class ApplicationManager {
 
         wd.navigate().to("https://demoqa.com/");
 
-        wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         wd.manage().window().maximize();
         alert = new HelperAlert(wd);
         select = new HelperSelect(wd);
