@@ -3,7 +3,7 @@ import org.testng.annotations.Test;
 
 public class AlertTests extends TestBase {
 
-    @BeforeMethod
+    @BeforeMethod (enabled = false)
     public void alertTest() {
         app.alert().selectItemAlert();
         app.alert().selectAlerts();
@@ -16,6 +16,10 @@ public class AlertTests extends TestBase {
         app.alert().clickButton2();
         app.alert().clickButton3();
         app.alert().clickButton4();
+    }
+    @Test
+    public void test(){
+
     }
 
 }

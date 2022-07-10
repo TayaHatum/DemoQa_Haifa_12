@@ -4,13 +4,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-//https://www.reddit.com/r/learnpython/comments/4zzn69/how_do_i_get_adblockplus_to_work_with_selenium/
-//'C:\Users\YOUR_USER_NAME\AppData\Local\Google\Chrome\User Data\Default\Extensions'
+
+//'C:\Users\YOUR_USER_NAME\AppData\Local\Google\Chrome\User Data\Default\Extensions'    win
+// /Users/YOUR_USER_NAME/Library/Application\ Support/Google/Chrome/Default/Extensions    mac
+//gighmmpiobklfepjocnamgkkbiglidom
 public class ApplicationManager {
 
     WebDriver wd;
@@ -19,10 +20,9 @@ public class ApplicationManager {
 
 
     public void init() {
-       // wd = new ChromeDriver();
+        //wd = new ChromeDriver();
 
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("load-extension=/Users/tayahatum/Library/Application\\ Support/Google/Chrome/Default/Extensions/gighmmpiobklfepjocnamgkkbiglidom");
         options.addArguments("load-extension=/Users/tayahatum/Tools/4.46.1_0");
         wd = new ChromeDriver(options);
 
